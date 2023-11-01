@@ -13,13 +13,13 @@ class BowlingGame
     end
   end
   
-  class BowlingGameSimulation
+ class BowlingGameSimulation
     def initialize
-      @players = 
-        'Gus' = BowlingGame.new('Gus'),
-        'Clark' = BowlingGame.new('Clark'),
-        'Richie' =  BowlingGame.new('Richie')
-      
+      @players = {
+        'Gus' => BowlingGame.new('Gus'),
+        'Clark' => BowlingGame.new('Clark'),
+        'Richie' => BowlingGame.new('Richie')
+      }
     end
   
     def play_game
@@ -36,7 +36,7 @@ class BowlingGame
         if pins_knockdown == 10
             puts "#{current_player.player_name} got a Strike!"
         else 
-            puts "#{current_player.player_name} The Bus is better than that!"
+            puts "#{current_player.player_name}  is better than that!"
         end
 
 
@@ -47,7 +47,7 @@ class BowlingGame
         if pins_knockdown == 10
             puts "#{current_player.player_name} got a Strike!"
         else 
-            puts "#{current_player.player_name} The Bus is better than that!"
+            puts "#{current_player.player_name}  is better than that!"
         end
         
       
@@ -63,3 +63,28 @@ class BowlingGame
   
   game_simulation = BowlingGameSimulation.new
   game_simulation.play_game
+
+
+
+
+
+
+  # class BowlingGameSimulation
+  #   def initialize
+  #     @players = {
+  #       'Gus' => BowlingGame.new('Gus'),
+  #       'Clark' => BowlingGame.new('Clark'),
+  #       'Richie' => BowlingGame.new('Richie')
+  #     }
+  #   end
+
+  # class BowlingGameSimulation
+    #   attr_accessor :players
+    
+    #   def initialize
+    #     @players = {}
+    #   end
+    
+    #   def add_player(player_name)
+    #     @players[player_name] = BowlingGame.new(player_name)
+    #   end
