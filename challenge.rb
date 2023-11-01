@@ -39,7 +39,7 @@ class BowlingGame
             puts "#{current_player.player_name}  is better than that!"
         end
 
-
+# got stuck here switching different player
         current_player = @players.values.shift
         puts "\nIt's #{current_player.player_name}'s turn."
         puts "Enter the number of pins knocked down: "
